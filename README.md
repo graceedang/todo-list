@@ -72,9 +72,13 @@ Now find the code that implements the **Mark a todo item as done** user story.
 While investigating that code, answer:
 
 - What Java type represents a todo item?
+- Answer: String
 - How is a todo item's completion status represented?
+- Answer: If the string ends with the word DONE
 - How can the program tell whether a todo item is completed when it saves the data?
+- Answer: In the save method, it keeps tracks of all the tasks in a JSON file. 
 - What do you think of this current representation?
+- Answer: It's inconvenient and not efficient. 
 
 > You do not need to understand every line in `TodoListPanel`. Focus on tracing
 how this one piece of functionality works.
@@ -107,11 +111,15 @@ To get started, perform a **noun–verb analysis** of the specification as a tea
 
 1. Identify the important **nouns**.
    - Which are candidate classes?
+   - Answer: Task, Edit, Main 
    - Which are better represented as attributes (instance variables) of another class?
+   - Answer: completed 
 
 2. Identify the important **verb phrases**.
    - What responsibilities do they suggest?
+   - Answer: getTitle
    - Which of your candidate classes should be responsible for each one?
+   - Answer: Task, Main, Edit
 
 > Remember, not *every* noun and verb should necessarily become a class or method
 > in our design.
@@ -152,10 +160,14 @@ through how the objects in your proposed design would carry out this scenario.
 For each step, ask:
 
 1. Which class has the responsibility for this step?
-2. What other objects would an instance of that class need to collaborate with?
-3. What information would it need?
-4. Does your UML class diagram provide the responsibilities and relationships needed
+- Answer: Edit
+3. What other objects would an instance of that class need to collaborate with?
+- Answer: Task
+4. What information would it need?
+- Answer: Task
+5. Does your UML class diagram provide the responsibilities and relationships needed
    for this to happen?
+- Answer: Yes
 
 If you reach a step that no class can perform, or an object needs information
 that it cannot obtain, **revise your UML diagram and start the scenario again**.
