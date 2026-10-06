@@ -63,7 +63,9 @@ As a user ...
 Still without looking at the code, as a team:
 
 1. Which stories does the current program support?
-2. Which stories does it only *partially* support?
+- Supports: 1, 2, 3, 4, 5, 9 10
+3. Which stories does it only *partially* support?
+- Supports: 7
 
 Now find the code that implements the **Mark a todo item as done** user story.
 
